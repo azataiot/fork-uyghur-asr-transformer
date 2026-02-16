@@ -1,0 +1,9 @@
+# Model weights
+*.pth
+*.pt
+*.7z
+
+# Python
+__pycache__/
+*.pyc
+.venv/
