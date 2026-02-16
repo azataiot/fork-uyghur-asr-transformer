@@ -11,8 +11,8 @@ import soundfile as sf
 from data import featurelen, sample_rate, hop_len
 from UFormer import UFormer
 
-SAMPLES_DIR = Path(__file__).resolve().parent.parent / "samples"
-RESULTS_DIR = Path(__file__).resolve().parent.parent / "results" / "gheyret-asr"
+SAMPLES_DIR = Path(__file__).resolve().parent.parent.parent / "samples"
+RESULTS_DIR = Path(__file__).resolve().parent.parent.parent / "results" / "gheyret-asr"
 
 # Model supports max 2500 frames. At sr=22050 and hop_len=200, that's ~22s.
 # Use 20s chunks with 1s overlap to stay safe.
