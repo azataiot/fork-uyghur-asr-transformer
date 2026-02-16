@@ -8,7 +8,7 @@ from pathlib import Path
 import librosa
 import soundfile as sf
 
-from data import featurelen, sample_rate, hop_len
+from data import featurelen, hop_len, sample_rate
 from UFormer import UFormer
 
 SAMPLES_DIR = Path(__file__).resolve().parent.parent.parent / "samples"
