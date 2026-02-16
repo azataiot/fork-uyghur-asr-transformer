@@ -8,7 +8,7 @@ class Uyghur():
 
     def encode(self, s):
         s = s.replace("-", ' ').replace(",", ' ').replace(".", ' ').replace("!", ' ').replace("?", ' ').replace("'","’")
-        s = re.sub('\s+',' ',s).strip().lower()
+        s = re.sub(r'\s+',' ',s).strip().lower()
         seq = [self.vocab_to_idx(v) for v in s if v in self.uyghur_latin]
         return seq
 
@@ -22,7 +22,7 @@ class Uyghur():
                 pass
             else:
                 vocabs.append(v)
-        s = re.sub('\s+',' ',"".join(vocabs)).strip()
+        s = re.sub(r'\s+',' ',"".join(vocabs)).strip()
         return s
 
     def vocab_to_idx(self, vocab):
